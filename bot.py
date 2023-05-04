@@ -909,7 +909,7 @@ def main():
         entry_points=[CommandHandler('voice_to_txt', voice_to_txt_command)],
 
         states={
-            1: [MessageHandler(filters.Document.WAV, downloader)]
+            1: [MessageHandler(filters.Document.ALL, downloader)]
         },
 
         fallbacks=[CommandHandler('stop', stop)]
